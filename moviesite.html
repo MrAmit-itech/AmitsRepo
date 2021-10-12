@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie</title>
+    <style>
+        #cont{
+            display: grid;
+            grid-template-columns: 20% 20% 20%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+
+        #cont>div{
+            padding: 3%;
+        }
+        #cont>div:hover{
+            background-color: rgb(230, 230, 230);
+            transition: .4s;
+            transform: scale(1.1)
+        }
+        img{
+            height: 300px;
+            width: 100%;
+        }
+        #cont>div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="enter movie name" name="" id="name">
+    <button onclick="movie()">search</button>
+
+    <div id ="cont">
+        
+    </div>
+    
+
+    <script>
+        var parent = document.getElementById("cont")
+        
+      async function movie(){
+          try{
+          var name = document.getElementById("name").value
+        var res = await fetch(`http://www.omdbapi.com/?apikey=c46365bc&s=${name}`)
+        var data = (await res.json()).Search
+            showdata(data)
+        }catch(error){
+           var errorimg = document.createElement("img")
+           errorimg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH3cZP36wmr24QVSkcMa0YAqN3DgRbSslxLw&usqp=CAU"
+           
+            parent.append(errorimg)
+        }
+       }
+       
+
+       function showdata(moviedata){
+           parent.innerHTML = null
+            moviedata.forEach( function(m){
+
+               
+
+                var image = document.createElement("img")
+                image.src = m.Poster
+
+                var title = document.createElement("h5")
+                title.textContent = m.Title
+
+                var year = document.createElement("h5")
+                year.textContent = m.Year
+
+                var rate = document.createElement("p")
+                 fetch(`http://www.omdbapi.com/?apikey=c46365bc&i=${m.imdbID}`).then(function(res){
+                    return res.json()
+                })
+                .then(function(res){
+                   if(Number(res.imdbRating) > 8.5){
+                    rate.textContent = res.imdbRating + "(Recommended)"
+                   }else{
+                    rate.textContent = res.imdbRating   
+                   }
+                })
+               
+
+                var main = document.createElement("div")
+                var divImg = document.createElement("div")
+                var divDet = document.createElement("div")
+
+                var Det1 = document.createElement("div")
+                Det1.append(title)
+
+                var Det2 = document.createElement("div")
+                Det2.append(year)
+
+                var Det3 = document.createElement("div")
+                Det3.append(rate)
+
+                divDet.append(Det1,Det2,Det3)
+                divImg.append(image)
+                main.append(divImg,divDet)
+
+                parent.append(main)
+            })
+        }
+    </script>
+</body>
+</html>
