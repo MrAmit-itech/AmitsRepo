@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            display: grid;
+            grid-template-columns: 20% 20% 20% 20%;
+            justify-content: center;
+            grid-gap: 4%;
+        }
+        #cont>div>div:nth-child(1){
+            height: 60%;
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+        
+      
+    </style>
+</head>
+<body>
+    <h1>movie details</h1>
+    <div id= "cont">
+    </div>
+
+    <script>
+        var parent = document.getElementById("cont")
+
+        async function movies(){
+            var res = await fetch("https://api.themoviedb.org/3/movie/popular?api_key=1b18e2369b35e5d36aa05907f5c70184")
+            var data = (await res.json()).results
+            console.log(data)
+            showdata(data)
+        }
+        movies()
+
+        function showdata(data){
+            data.forEach(function(m){
+                //parent.innerHTML = null
+
+                var main = document.createElement("div")
+                var divIm = document.createElement("div")
+                var Detdiv = document.createElement("div")
+                var detdiv1 = document.createElement("div")
+                var detdiv2 = document.createElement("div")
+                var detdiv3 = document.createElement("div")
+
+                var image = document.createElement("img")
+                image.src = `https://image.tmdb.org/t/p/w500${m.poster_path}`
+                divIm.append(image)
+
+                var title = document.createElement("h5")
+                title.textContent = m.title
+                detdiv1.append(title)
+
+                var rating = document.createElement("h5")
+                rating.textContent = m.vote_average
+                detdiv3.append(rating)
+
+                var desc = document.createElement("p")
+                desc.textContent = m.overview
+                detdiv2.append(desc)
+
+                Detdiv.append(detdiv1,detdiv2,detdiv3)
+                main.append(divIm,Detdiv)
+
+                parent.append(main)
+
+            })
+        }
+    </script>
+</body>
+</html>

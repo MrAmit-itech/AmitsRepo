@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEbounce</title>
+    <style>
+        #cont{
+            display: grid;
+            grid-template-columns: 15% 15% 15% 15%;
+            grid-gap: 5%;
+            justify-content: center;
+        }
+
+        #cont>div{
+            padding: 3%;
+        }
+        #cont>div:hover{
+            background-color: rgb(230, 230, 230);
+            transition: .4s;
+            transform:scale(1.02)
+        }
+        img{
+            height: 280px;
+            width: 100%;
+        }
+        #cont>div:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        h5{
+            margin:0%;
+            padding: 0%;
+        }
+        p{
+            margin:0%;
+            padding:0%;
+        }
+        #pop{
+            border:1px solid black;
+            cursor: pointer;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <input oninput="debounce(movie,1300)" type="text" placeholder="enter movie name" name="" id="name">
+    
+    <div id="pop">
+        <H3 id = "popu">POPULAR MOVIES---</H3>
+    </div>
+    <div id ="cont">   
+    </div>
+
+    
+
+    <script>
+        var timeoutID
+        var parent = document.getElementById("cont")
+
+        var popu = document.getElementById("popu").addEventListener("click",populars)
+
+        function populars(){
+            window.location.href = "popular.html"
+        }
+
+       
+
+      async function movie(){
+          try{
+          var name = document.getElementById("name").value
+        var res = await fetch(`http://www.omdbapi.com/?apikey=c46365bc&s=${name}`)
+        var data = (await res.json()).Search
+        console.log(data)
+            showdata(data)
+        }catch(error){
+           var errorimg = document.createElement("img")
+           errorimg.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH3cZP36wmr24QVSkcMa0YAqN3DgRbSslxLw&usqp=CAU"
+           
+            parent.append(errorimg)
+        }
+       }
+
+       function debounce(func,delay){
+        if(timeoutID){
+           clearTimeout(timeoutID)
+        }
+
+        timeoutID = setTimeout(function(){
+            func()
+        },delay)
+       }
+       
+
+       function showdata(moviedata){
+           parent.innerHTML = null
+            moviedata.forEach( function(m){
+
+               var recom = document.createElement("h5")
+               recom.textContent = "( Recommended )"
+               
+
+                var image = document.createElement("img")
+                image.src = m.Poster
+
+                var title = document.createElement("h5")
+                title.textContent = m.Title
+                var nam = title.textContent
+
+                var year = document.createElement("h5")
+                year.textContent = m.Year
+
+                var rate = document.createElement("p")
+                 fetch(`http://www.omdbapi.com/?apikey=c46365bc&i=${m.imdbID}`).then(function(res){
+                    return res.json()
+                })
+                .then(function(res){
+                   if(Number(res.imdbRating) > 8.5){
+                    rate.textContent = res.imdbRating + recom.textContent
+                   }else{
+                    rate.textContent = res.imdbRating   
+                   }
+                })
+               
+
+                var main = document.createElement("div")
+                var divImg = document.createElement("div")
+                var divDet = document.createElement("div")
+                var btn = document.createElement("button")
+                btn.innerText = "check details"
+                btn.onclick = run
+
+                var Det1 = document.createElement("div")
+                Det1.append(title)
+
+                var Det2 = document.createElement("div")
+                Det2.append(year)
+
+                var Det3 = document.createElement("div")
+                Det3.append(rate)
+
+                divDet.append(Det1,Det2,Det3,btn)
+                divImg.append(image)
+                main.append(divImg,divDet)
+
+                parent.append(main)
+
+                function run(){
+                    parent.innerHTML = null
+                    var single  = document.createElement("div")
+                    var head = document.createElement("h5")
+                    head.textContent = nam
+
+                    var image = document.createElement("img")
+                    image.src = m.Poster
+                    image.style.width = "480px"
+                    image.style.height = "480px"
+
+                    var title = document.createElement("h5")
+                    title.textContent = m.Title
+                    
+
+                    var year = document.createElement("h5")
+                    year.textContent = m.Year
+
+                    single.append(image,title,year)
+                    parent.append(single)
+                }
+
+            })
+        }
+        
+
+       
+       
+    </script>
+</body>
+</html>
