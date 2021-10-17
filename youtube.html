@@ -229,8 +229,8 @@
 
    <script>
 
-        let keys = "AIzaSyCq6wFOh9luheXbvrt-bgUnzHMSxFJ0fEU"
-        //popular()
+        let keys = "AIzaSyDuvF9hkT26f4UGF9Beon-77W5FbD2F3Vs"
+        popular()
 
        let timeoutID
         document.body.addEventListener("click",dropgone)
@@ -285,14 +285,14 @@
                 div.append(head)
                 drop.append(div)
 
-                run=()=>{
+                function run(){
                     console.log(t.id.videoId+" is clicked")
                     datafetch(t.id.videoId)
                 }
             })
            
         }
-        fdropgone=()=>{
+        function dropgone(){
             //console.log("body is clicked")
             drop.style.display = "none"
         }
@@ -362,10 +362,10 @@
             let vidRelate =  (await res.json()).items
            // console.log("vidsre-" ,vidRelateArr)
            
-            relatedvids(vidRelate)
+            relatevids(vidRelate)
         }
 
-        function relatedvids(vidRelate){
+        function relatevids(vidRelate){
             displaybox.innerHTML = null
             vidRelate.forEach(function({id,snippet}){
                 //console.log("id-"+id)
