@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>youtube</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <style>
+        #cont{
+            /* border:1px solid black; */
+            display: flex;
+            margin:auto;
+        }
+        #leftnav{
+            /* border: 1px solid black; */
+            width:6%;
+        }
+        #right{
+            /* border:1px solid black; */
+            width:94%;
+        }
+        #right>div:nth-child(1){
+            background-color: white;
+           
+            /* border:1px solid black; */
+            /* background-color: rgb(224, 166, 166); */
+        }
+        #right>div:nth-child(2){
+            /* background-color: cadetblue; */
+            height: 100px;
+        }
+        #topnav{
+            display: flex;
+           position: fixed;
+           z-index: 1;
+           width: 93%;
+           padding-bottom: 5%;
+        }
+        #topnav>div:nth-child(1){
+            flex-grow: 1;
+        }
+        #topnav>div:nth-child(2){
+            padding-left: 11%;
+            width:57%;
+            /* background-color: khaki; */
+        }
+        #topnav>div:nth-child(3){
+            flex-grow: 2.5;
+            /* background-color: lightblue; */
+            padding-top: 8px;
+        }
+        #topnav>div:nth-child(4){
+            flex-grow: 5;
+            padding-right: 1%;
+            /* background-color: rgb(221, 228, 235); */
+        }
+        #imageYou{
+            width:100px;
+        }
+        #toplast{
+            display: flex;
+            justify-content: space-between;
+        }
+        #toplast>div{
+            padding-top: 8px;
+        }
+        #leftnav{
+            display: flex;
+            flex-direction: column;
+            height:780px;
+            padding-left: 1%;
+            padding-right: 0%;
+            position:fixed;
+            z-index: 1;
+        }
+        #displaybox{
+            padding-top: 5%;
+            padding-left: 2%;
+            padding-right: 8%;
+            margin-top: 5%;
+            display: grid;
+            grid-template-columns:repeat(4,18%);
+            grid-gap: 1%;
+            justify-content: space-between;
+        }
+        #leftnav>div{
+            padding-top:20px;padding-bottom: 22px;
+        }
+        #right{
+            padding-left: 7.1%;
+
+        }
+       
+        
+        /* searchbox code starts here */
+        #main{
+            padding-top: 5px;
+        }
+        #dropdown{
+            border: 1px solid black;border-top: hidden;
+            display: none;
+            width:54.3%;
+            position: absolute;
+            box-shadow: 0px 8px 16px 0px rgb(163, 163, 163);
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+        }
+        #dropdown>div{
+            padding: 0.7%;
+            white-space: nowrap;
+        }
+        #dropdown>div:hover{
+            cursor: pointer;
+            background-color: rgb(231, 233, 235);
+        }
+
+        h5{
+            padding:0%;
+            margin: 0%;
+            color: indigo;
+            font-size: large;
+        }
+        h6{
+            font-size: medium;
+            color: grey;
+            padding-top: 1px;
+        }
+        .material-icons{
+            font-size: 28px;
+        }
+        body{
+            margin:0%
+        }
+        #find:hover{
+            cursor: pointer;
+            background-color: rgb(240, 235, 235);
+            transition: .3;
+        }
+        SIGN_IN{
+            border:1px solid blue
+        }
+        #disp_name{
+            cursor: pointer;
+            border:1px solid blue
+        }
+        #disp_name:hover{
+            background-color: rgb(230, 234, 243);
+        }
+       
+        /* searchbox code ends here */
+    </style>
+</head>
+<head>
+    
+</head>
+<body>
+   <div id="cont">
+    <div id ="leftnav">
+        <div class="material-icons">
+            <span class="material-icons-outlined">
+                reorder
+            </span>
+            <h5>amit</h5>
+        </div>
+        <div class="material-icons">
+            <span class="material-icons-outlined">
+                home
+            </span>
+        </div>
+        <div class="material-icons">
+            <span class="material-icons-outlined">
+                explore
+            </span>
+        </div>
+        <div class="material-icons">
+            <span class="material-icons-outlined">
+                subscriptions
+            </span>
+        </div>
+        <div class="material-icons">
+            <span class="material-icons-outlined">
+                video_library
+            </span>
+        </div>
+       
+    </div>
+    <div id="right">
+        <div id ="topnav">
+            <div>
+                <img id ="imageYou" src="https://i.insider.com/59a59a8d79bbfd1d008b601a?width=1200&format=jpeg" alt="">
+            </div>
+            <div id="main">
+                <input type="text" style="padding: 10px;font-size: large;" size="70%" autocomplete="off" placeholder="Search" oninput="debounce(check,300)" name="" id="input"> 
+                <div id ="dropdown"></div>
+            </div>
+            <div class="material-icons">
+                <span id ="find" class="material-icons-outlined">
+                    search
+                    </span>
+            </div>
+            <div id ="toplast">
+                <div class="material-icons">
+                    <span class="material-icons-outlined">
+                        mic
+                        </span>
+                </div>
+                <div class ="material-icons">
+                    <span class="material-icons-outlined">
+                        video_call
+                        </span>
+                </div>
+                <div class ="material-icons">
+                    <span class="material-icons-outlined">
+                        apps
+                        </span>
+                </div>
+                <div class="material-icons">
+                    <span class="material-icons-outlined">
+                        notifications
+                        </span>
+                </div>
+                <div id = "SIGN_IN" >
+                    <span style="color:blue;" id ="disp_name"><a href="sigupLogin\signUp.html">SIGN UP</a></span>
+                </div>
+            </div>
+        </div>
+        <div id ="displaybox">
+           
+        </div>
+    </div>
+   </div>
+
+
+
+
+   <script>
+       var display_name = document.getElementById("disp_name")
+       
+
+       if(sessionStorage.getItem("user_name")){
+            display_name.textContent = JSON.parse(sessionStorage.getItem("user_name"))
+       }
+
+        let keys = "AIzaSyDuvF9hkT26f4UGF9Beon-77W5FbD2F3Vs"
+        popular()
+
+       let timeoutID
+        document.body.addEventListener("click",dropgone)
+        let displaybox = document.getElementById("displaybox")
+
+        let parent = document.getElementById("main")
+        let drop = document.getElementById("dropdown")
+
+        var search = document.getElementById("input")
+        
+        //http://www.omdbapi.com/?apikey=c46365bc&
+        function check(){
+            moviedata(search.value)
+        }    
+
+        debounce=(func,delay)=>{  
+            if(timeoutID){
+                clearTimeout(timeoutID)
+            }
+            timeoutID = setTimeout(()=>{
+               func()
+            },delay)
+        }
+      
+        async function moviedata(m){
+            try{
+            var res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${m}&key=${keys}`)
+            var data = (await res.json()).items
+            console.log(data)
+
+            if(data){  
+                drop.style.display = "block"
+            }else{
+                drop.style.display = "none"
+            }
+            showdata(data)
+
+            }catch(e){
+                console.log("error")
+            }
+        }
+    
+        
+        function showdata(arr){
+            drop.innerHTML = null
+            arr.forEach((t)=>{
+                
+                var div = document.createElement("div")
+                var head = document.createElement("h5")
+                head.textContent = t.snippet.title
+                head.onclick = run
+                div.append(head)
+                drop.append(div)
+
+                function run(){
+                    console.log(t.id.videoId+" is clicked")
+                    datafetch(t.id.videoId)
+                }
+            })
+           
+        }
+        function dropgone(){
+            //console.log("body is clicked")
+            drop.style.display = "none"
+        }
+
+    //here starts displaybox coding
+        
+        async function datafetch (entry){
+            let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&relatedToVideoId=${entry}&type=video&key=${keys}&maxResults=20`)
+            let vidRelateArr =  (await res.json()).items
+            console.log("vidsre-" ,vidRelateArr)
+           
+            relatedvids(vidRelateArr)
+        }
+
+        function relatedvids(vidRelateArr){
+            displaybox.innerHTML = null
+            vidRelateArr.forEach(function({id,snippet}){
+
+                var dispblock = document.createElement("div")
+                var vidblock = document.createElement("div")
+                var detblock = document.createElement("div")
+                var h6 = document.createElement("h6")
+                h6.textContent = snippet.title
+                detblock.append(h6)
+                console.log("id-"+id.videoId)
+
+                vidblock.innerHTML = `<iframe width="290" height="150" src="https://www.youtube.com/embed/${id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                 //console.log("channeltitle is-"+snippet.title)
+               
+                dispblock.append(vidblock,detblock)
+                displaybox.append(dispblock)
+            })
+        }
+
+
+//work on search button start here
+        document.getElementById("find").addEventListener("click",find)
+
+        function find(){
+            console.log("find is triggered")
+            var dataentry =  search.value
+            tofind( dataentry )
+            
+        }
+
+        async function tofind(query){
+            var res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=${keys}&maxResults = 20`)
+            var data = (await res.json()).items
+            appendfound(data)
+        }
+
+        function appendfound(arr){
+            displaybox.innerHTML = null
+            arr.forEach(function({id:{videoId}}){
+                
+                var vidblock = document.createElement("div")
+                vidblock.innerHTML = `<iframe width="290" height="150" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                 //console.log("channeltitle is-"+snippet.title)
+                displaybox.append(vidblock)
+            })
+        }
+     //search button work ends here
+
+     //POPULAR VIDEOS
+     async function popular (){
+            let res = await fetch(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&regionCode=IN&key=AIzaSyCq6wFOh9luheXbvrt-bgUnzHMSxFJ0fEU`)
+            let vidRelate =  (await res.json()).items
+           // console.log("vidsre-" ,vidRelateArr)
+           
+            relatevids(vidRelate)
+        }
+
+        function relatevids(vidRelate){
+            displaybox.innerHTML = null
+            vidRelate.forEach(function({id,snippet}){
+                //console.log("id-"+id)
+                var dispblock = document.createElement("div")
+                var vidblock = document.createElement("div")
+                var detblock = document.createElement("div")
+                var h6 = document.createElement("h6")
+                h6.textContent = snippet.title
+                detblock.append(h6)
+
+                vidblock.innerHTML = `<iframe width="290" height="150" src="https://www.youtube.com/embed/${id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+                 
+               
+                dispblock.append(vidblock,detblock)
+                displaybox.append(dispblock)
+            })
+        }
+
+
+   </script>
+</body>
+
+</html>
