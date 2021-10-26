@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Language translator</h1>
+    <div id= "cont">
+        <div id ="inputdiv">
+            <div>
+                
+                <select  id="selectin" name="">
+                    <option value="en">english</option>
+                    <option value="hi">hindi</option>
+                    <option value="ru">russian</option>
+                    <option value="fr">french</option>
+                    <option value="ar">arabic</option>
+                    <option value="zh">chinese</option>
+                    <option value="de">german</option>
+                    <option value="it">italian</option>
+                    <option value="id">indonesian</option>
+                    <option value="tr">turkish</option>
+                    <option value="pt">portugese</option>
+                </select>
+            </div>
+            <div>
+                <input oninput="inputvalue()" placeholder="Type Text" autocomplete="off" type="text" name="" id="input">
+            </div>
+        </div>
+        <div id ="outputdiv">
+           <div>
+            <select  name="" id="selectout">
+                <option value="en">english</option>
+                <option value="hi">hindi</option>
+                <option value="ru">russian</option>
+                <option value="fr">french</option>
+                <option value="ar">arabic</option>
+                <option value="zh">chinese</option>
+                <option value="de">german</option>
+                <option value="it">italian</option>
+                <option value="id">indonesian</option>
+                <option value="tr">turkish</option>
+                <option value="pt">portugese</option>
+            </select>
+           </div>
+           <div id ="display">
+            
+           </div>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
