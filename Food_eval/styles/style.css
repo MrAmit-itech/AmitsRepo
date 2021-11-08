@@ -1,0 +1,27 @@
+#navbar{
+    display: flex;
+    justify-content: right;
+    gap: 15px;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(234, 244, 245);
+    font-size: xx-large;
+}
+#signup{
+    font-size: x-large;
+    border: 1px solid blue;
+    margin:20px auto;
+}
+#login_cont{
+    font-size: x-large;
+    border: 1px solid black;
+    padding: 30px;
+    margin:auto 200px
+}
+img{
+    width:400px
+}
+#notify{
+    color:red;
+}
+

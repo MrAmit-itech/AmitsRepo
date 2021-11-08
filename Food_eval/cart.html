@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id = 'navbar'></div>
+    <h1 id = 'notify'></h1>
+    <button onclick="run()" id ='order'>Place Order</button>
+    
+    <div id = "place_order">
+        
+    </div>
+</body>
+
+<script type="module">
+    import nav from './components/navbar.js'
+    document.getElementById('navbar').innerHTML = nav()
+</script>
+<script src="./scripts/cart.js"></script>
+</html>

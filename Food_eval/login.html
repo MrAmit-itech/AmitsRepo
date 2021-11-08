@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <div id = "navbar"></div>
+    <div id = "login_cont">
+        <!-- {
+            "password": "secret",
+            "username": "masai-school"
+          } -->
+          <form id = "loginData" onsubmit="login(event)" action="">
+              <table>
+                  <h3>LOGIN</h3>
+                <tr>
+                   <td>username</td>
+                   <td><input type="text" name="" placeholder="username" id="username"></td>
+               </tr>
+               <tr>
+                <td>password</td>
+                <td><input type="password" name="" placeholder="password" id="password"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" name="" id=""></td>
+                </tr>
+              </table>
+          </form>
+    </div>
+    <script type="module">
+        import nav from './components/navbar.js'
+        document.getElementById('navbar').innerHTML = nav()
+    </script>
+    <script src="./scripts/login.js"></script>
+</body>
+</html>
