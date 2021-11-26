@@ -1,0 +1,1633 @@
+C:\Users\AmitsRiG>mongoimport --db test --drop --collection  users --file "C:\Users\AmitsRiG\Desktop\study\MOCK_DATA_2.json" --jsonArray
+2021-11-25T15:05:11.412+0530    connected to: mongodb://localhost/
+2021-11-25T15:05:11.414+0530    dropping: test.users
+2021-11-25T15:05:11.886+0530    500 document(s) imported successfully. 0 document(s) failed to import.
+
+C:\Users\AmitsRiG>mongo
+MongoDB shell version v5.0.4
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("511a35a9-2e20-49fd-acd9-d0ee3f385dde") }
+MongoDB server version: 5.0.4
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2021-11-23T02:15:12.849+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+test    0.000GB
+> use test
+switched to db test
+> db.users.find().pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f93"),
+        "id" : 5,
+        "movie_name" : "Silent Wedding (Nunta Muta)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18234
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f97"),
+        "id" : 8,
+        "movie_name" : "Young Ones",
+        "movie_genre" : "Drama|Sci-Fi|Western",
+        "production_year" : 2000,
+        "budget" : 18166
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f98"),
+        "id" : 9,
+        "movie_name" : "My Perestroika",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 10372
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f99"),
+        "id" : 2,
+        "movie_name" : "Reflecting Skin, The",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 9039
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9b"),
+        "id" : 10,
+        "movie_name" : "Brothers Bloom, The",
+        "movie_genre" : "Adventure|Comedy|Crime|Romance",
+        "production_year" : 1996,
+        "budget" : 14092
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9c"),
+        "id" : 14,
+        "movie_name" : "They Call Him Bulldozer (Lo chiamavano Bulldozer)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 10947
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9e"),
+        "id" : 15,
+        "movie_name" : "Personal Best",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 9133
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa4"),
+        "id" : 19,
+        "movie_name" : "Paranoia Agent",
+        "movie_genre" : "Animation|Crime|Drama|Horror|Mystery",
+        "production_year" : 1995,
+        "budget" : 15085
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+Type "it" for more
+> db.users.find({movie_name : {$eq: "Leila"}})
+{ "_id" : ObjectId("619f58cf10453566bafc3fa5"), "id" : 20, "movie_name" : "Leila", "movie_genre" : "Drama|Romance", "production_year" : 2004, "budget" : 10912 }
+> db.users.find({movie_name : {$eq: "Leila"}}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+> db.users.find({movie_name : {$ne: "Leila"}}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f93"),
+        "id" : 5,
+        "movie_name" : "Silent Wedding (Nunta Muta)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18234
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f97"),
+        "id" : 8,
+        "movie_name" : "Young Ones",
+        "movie_genre" : "Drama|Sci-Fi|Western",
+        "production_year" : 2000,
+        "budget" : 18166
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f98"),
+        "id" : 9,
+        "movie_name" : "My Perestroika",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 10372
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f99"),
+        "id" : 2,
+        "movie_name" : "Reflecting Skin, The",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 9039
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9b"),
+        "id" : 10,
+        "movie_name" : "Brothers Bloom, The",
+        "movie_genre" : "Adventure|Comedy|Crime|Romance",
+        "production_year" : 1996,
+        "budget" : 14092
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9c"),
+        "id" : 14,
+        "movie_name" : "They Call Him Bulldozer (Lo chiamavano Bulldozer)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 10947
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9e"),
+        "id" : 15,
+        "movie_name" : "Personal Best",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 9133
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa4"),
+        "id" : 19,
+        "movie_name" : "Paranoia Agent",
+        "movie_genre" : "Animation|Crime|Drama|Horror|Mystery",
+        "production_year" : 1995,
+        "budget" : 15085
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa6"),
+        "id" : 22,
+        "movie_name" : "Quiet Ones, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2006,
+        "budget" : 19420
+}
+Type "it" for more
+> db.users.find({movie_name : {$gte: "budget"}}).pretty()
+> db.users.find({budget : {$gte: 15000}}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f93"),
+        "id" : 5,
+        "movie_name" : "Silent Wedding (Nunta Muta)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18234
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f97"),
+        "id" : 8,
+        "movie_name" : "Young Ones",
+        "movie_genre" : "Drama|Sci-Fi|Western",
+        "production_year" : 2000,
+        "budget" : 18166
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa4"),
+        "id" : 19,
+        "movie_name" : "Paranoia Agent",
+        "movie_genre" : "Animation|Crime|Drama|Horror|Mystery",
+        "production_year" : 1995,
+        "budget" : 15085
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa6"),
+        "id" : 22,
+        "movie_name" : "Quiet Ones, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2006,
+        "budget" : 19420
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa9"),
+        "id" : 26,
+        "movie_name" : "Occupants, The",
+        "movie_genre" : "Thriller",
+        "production_year" : 1998,
+        "budget" : 16823
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3faa"),
+        "id" : 27,
+        "movie_name" : "Carlito's Way",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 18654
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fad"),
+        "id" : 28,
+        "movie_name" : "Dragon Ball GT: A Hero's Legacy (Doragon bôru GT: Gokû gaiden! Yûki no akashi wa sû-shin-chû)",
+        "movie_genre" : "Action|Adventure|Animation",
+        "production_year" : 2005,
+        "budget" : 19946
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3faf"),
+        "id" : 33,
+        "movie_name" : "Cheetah",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2016,
+        "budget" : 19286
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb8"),
+        "id" : 41,
+        "movie_name" : "Funny Games",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2000,
+        "budget" : 15776
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb9"),
+        "id" : 42,
+        "movie_name" : "Sitting Bull",
+        "movie_genre" : "Western",
+        "production_year" : 2013,
+        "budget" : 15336
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fba"),
+        "id" : 44,
+        "movie_name" : "Unconditional Love",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1997,
+        "budget" : 15422
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fbc"),
+        "id" : 37,
+        "movie_name" : "Donner Pass",
+        "movie_genre" : "Horror",
+        "production_year" : 1997,
+        "budget" : 18971
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fbf"),
+        "id" : 47,
+        "movie_name" : "Third Wheel, The",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2012,
+        "budget" : 15619
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fc1"),
+        "id" : 38,
+        "movie_name" : "Handful of Dust, A",
+        "movie_genre" : "Drama",
+        "production_year" : 2019,
+        "budget" : 16714
+}
+Type "it" for more
+> db.users.find({budget : {$lte: 15000}}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f98"),
+        "id" : 9,
+        "movie_name" : "My Perestroika",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 10372
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f99"),
+        "id" : 2,
+        "movie_name" : "Reflecting Skin, The",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 9039
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9b"),
+        "id" : 10,
+        "movie_name" : "Brothers Bloom, The",
+        "movie_genre" : "Adventure|Comedy|Crime|Romance",
+        "production_year" : 1996,
+        "budget" : 14092
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9c"),
+        "id" : 14,
+        "movie_name" : "They Call Him Bulldozer (Lo chiamavano Bulldozer)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 10947
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9e"),
+        "id" : 15,
+        "movie_name" : "Personal Best",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 9133
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa7"),
+        "id" : 24,
+        "movie_name" : "Lower City (Cidade Baixa)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa8"),
+        "id" : 25,
+        "movie_name" : "Un vampiro para dos",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2015,
+        "budget" : 14497
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fab"),
+        "id" : 21,
+        "movie_name" : "Drogówka",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2004,
+        "budget" : 10526
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fac"),
+        "id" : 23,
+        "movie_name" : "Night Strangler, The",
+        "movie_genre" : "Crime|Horror|Mystery",
+        "production_year" : 1993,
+        "budget" : 13347
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fae"),
+        "id" : 31,
+        "movie_name" : "Angels Crest",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb0"),
+        "id" : 32,
+        "movie_name" : "Stoker",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 12465
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb1"),
+        "id" : 35,
+        "movie_name" : "Extraction",
+        "movie_genre" : "Action",
+        "production_year" : 1990,
+        "budget" : 14520
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb2"),
+        "id" : 34,
+        "movie_name" : "Private Parts",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 1998,
+        "budget" : 12509
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb3"),
+        "id" : 36,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2019,
+        "budget" : 13177
+}
+> db.users.find({$and: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa6"),
+        "id" : 22,
+        "movie_name" : "Quiet Ones, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2006,
+        "budget" : 19420
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa7"),
+        "id" : 24,
+        "movie_name" : "Lower City (Cidade Baixa)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa8"),
+        "id" : 25,
+        "movie_name" : "Un vampiro para dos",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2015,
+        "budget" : 14497
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3faa"),
+        "id" : 27,
+        "movie_name" : "Carlito's Way",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 18654
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fab"),
+        "id" : 21,
+        "movie_name" : "Drogówka",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2004,
+        "budget" : 10526
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fad"),
+        "id" : 28,
+        "movie_name" : "Dragon Ball GT: A Hero's Legacy (Doragon bôru GT: Gokû gaiden! Yûki no akashi wa sû-shin-chû)",
+        "movie_genre" : "Action|Adventure|Animation",
+        "production_year" : 2005,
+        "budget" : 19946
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fae"),
+        "id" : 31,
+        "movie_name" : "Angels Crest",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3faf"),
+        "id" : 33,
+        "movie_name" : "Cheetah",
+        "movie_genre" : "Adventure|Children",
+        "production_year" : 2016,
+        "budget" : 19286
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb0"),
+        "id" : 32,
+        "movie_name" : "Stoker",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 12465
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb3"),
+        "id" : 36,
+        "movie_name" : "Doctor Who",
+        "movie_genre" : "Adventure|Sci-Fi",
+        "production_year" : 2019,
+        "budget" : 13177
+}
+Type "it" for more
+> db.users.find({$or: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f93"),
+        "id" : 5,
+        "movie_name" : "Silent Wedding (Nunta Muta)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18234
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f97"),
+        "id" : 8,
+        "movie_name" : "Young Ones",
+        "movie_genre" : "Drama|Sci-Fi|Western",
+        "production_year" : 2000,
+        "budget" : 18166
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f98"),
+        "id" : 9,
+        "movie_name" : "My Perestroika",
+        "movie_genre" : "Documentary",
+        "production_year" : 2000,
+        "budget" : 10372
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f99"),
+        "id" : 2,
+        "movie_name" : "Reflecting Skin, The",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 9039
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9b"),
+        "id" : 10,
+        "movie_name" : "Brothers Bloom, The",
+        "movie_genre" : "Adventure|Comedy|Crime|Romance",
+        "production_year" : 1996,
+        "budget" : 14092
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9c"),
+        "id" : 14,
+        "movie_name" : "They Call Him Bulldozer (Lo chiamavano Bulldozer)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 10947
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9e"),
+        "id" : 15,
+        "movie_name" : "Personal Best",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 9133
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa4"),
+        "id" : 19,
+        "movie_name" : "Paranoia Agent",
+        "movie_genre" : "Animation|Crime|Drama|Horror|Mystery",
+        "production_year" : 1995,
+        "budget" : 15085
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+> db.users.find({$nor: [{production_year: {$gt: 2000}},{budget: {$gt: 10000}}]}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fbd"),
+        "id" : 45,
+        "movie_name" : "Panic in Needle Park, The",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1996,
+        "budget" : 9348
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fbe"),
+        "id" : 46,
+        "movie_name" : "Sundown",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2000,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fe9"),
+        "id" : 90,
+        "movie_name" : "Bitter Sweet",
+        "movie_genre" : "Drama|Musical|Romance",
+        "production_year" : 1990,
+        "budget" : 9941
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc401b"),
+        "id" : 140,
+        "movie_name" : "Kissed",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 1991,
+        "budget" : 9271
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc406f"),
+        "id" : 221,
+        "movie_name" : "Cockpit",
+        "movie_genre" : "Comedy",
+        "production_year" : 1998,
+        "budget" : 9254
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc409b"),
+        "id" : 261,
+        "movie_name" : "Universal Soldier: The Return",
+        "movie_genre" : "Action|Sci-Fi",
+        "production_year" : 1993,
+        "budget" : 9646
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4102"),
+        "id" : 369,
+        "movie_name" : "Adventures of Huckleberry Finn, The",
+        "movie_genre" : "Adventure|Drama",
+        "production_year" : 1997,
+        "budget" : 9791
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc415a"),
+        "id" : 458,
+        "movie_name" : "Heatstroke",
+        "movie_genre" : "Thriller",
+        "production_year" : 1995,
+        "budget" : 9641
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc416d"),
+        "id" : 474,
+        "movie_name" : "Lake Tahoe",
+        "movie_genre" : "Drama",
+        "production_year" : 1999,
+        "budget" : 9301
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc417c"),
+        "id" : 487,
+        "movie_name" : "Zatoichi's Revenge (Zatôichi nidan-kiri) (Zatôichi 10)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 1994,
+        "budget" : 9392
+}
+> db.users.find({$or: [{production_year: {$ne: 2000}},{budget: {$lt: 10000}}]}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f92"),
+        "id" : 4,
+        "movie_name" : "Ninotchka",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2016,
+        "budget" : 17904
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f93"),
+        "id" : 5,
+        "movie_name" : "Silent Wedding (Nunta Muta)",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 1991,
+        "budget" : 18234
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f96"),
+        "id" : 7,
+        "movie_name" : "Cheerleader Camp",
+        "movie_genre" : "Comedy|Horror|Mystery",
+        "production_year" : 2016,
+        "budget" : 12767
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f99"),
+        "id" : 2,
+        "movie_name" : "Reflecting Skin, The",
+        "movie_genre" : "Drama|Horror|Thriller",
+        "production_year" : 2010,
+        "budget" : 9039
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9b"),
+        "id" : 10,
+        "movie_name" : "Brothers Bloom, The",
+        "movie_genre" : "Adventure|Comedy|Crime|Romance",
+        "production_year" : 1996,
+        "budget" : 14092
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9c"),
+        "id" : 14,
+        "movie_name" : "They Call Him Bulldozer (Lo chiamavano Bulldozer)",
+        "movie_genre" : "Action|Comedy",
+        "production_year" : 1991,
+        "budget" : 10947
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9d"),
+        "id" : 13,
+        "movie_name" : "Little Shop of Horrors, The",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2012,
+        "budget" : 15518
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9e"),
+        "id" : 15,
+        "movie_name" : "Personal Best",
+        "movie_genre" : "Drama",
+        "production_year" : 2011,
+        "budget" : 9133
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9f"),
+        "id" : 16,
+        "movie_name" : "Emma",
+        "movie_genre" : "Comedy|Drama|Romance",
+        "production_year" : 2017,
+        "budget" : 18618
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa1"),
+        "id" : 18,
+        "movie_name" : "Finances of the Grand Duke, The (Die Finanzen des Großherzogs)",
+        "movie_genre" : "Comedy",
+        "production_year" : 2019,
+        "budget" : 15199
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa4"),
+        "id" : 19,
+        "movie_name" : "Paranoia Agent",
+        "movie_genre" : "Animation|Crime|Drama|Horror|Mystery",
+        "production_year" : 1995,
+        "budget" : 15085
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa6"),
+        "id" : 22,
+        "movie_name" : "Quiet Ones, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2006,
+        "budget" : 19420
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa7"),
+        "id" : 24,
+        "movie_name" : "Lower City (Cidade Baixa)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14854
+}
+Type "it" for more
+>> db.users.find({$and: [{production_year: {$gt: 2000}},{production_year :{$lt: 2010}}]}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f94"),
+        "id" : 6,
+        "movie_name" : "Assassination (Ansatsu) (Assassination, The) (Assassin, The)",
+        "movie_genre" : "Action|Drama",
+        "production_year" : 2002,
+        "budget" : 14392
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f9a"),
+        "id" : 1,
+        "movie_name" : "Love Is All There Is",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2008,
+        "budget" : 9703
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa2"),
+        "id" : 11,
+        "movie_name" : "Unknown White Male",
+        "movie_genre" : "Documentary",
+        "production_year" : 2001,
+        "budget" : 11390
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa3"),
+        "id" : 12,
+        "movie_name" : "The Lost Squadron",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2002,
+        "budget" : 16396
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa5"),
+        "id" : 20,
+        "movie_name" : "Leila",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2004,
+        "budget" : 10912
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa6"),
+        "id" : 22,
+        "movie_name" : "Quiet Ones, The",
+        "movie_genre" : "Horror",
+        "production_year" : 2006,
+        "budget" : 19420
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3faa"),
+        "id" : 27,
+        "movie_name" : "Carlito's Way",
+        "movie_genre" : "Crime|Drama",
+        "production_year" : 2007,
+        "budget" : 18654
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fab"),
+        "id" : 21,
+        "movie_name" : "Drogówka",
+        "movie_genre" : "Comedy|Crime|Drama",
+        "production_year" : 2004,
+        "budget" : 10526
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fad"),
+        "id" : 28,
+        "movie_name" : "Dragon Ball GT: A Hero's Legacy (Doragon bôru GT: Gokû gaiden! Yûki no akashi wa sû-shin-chû)",
+        "movie_genre" : "Action|Adventure|Animation",
+        "production_year" : 2005,
+        "budget" : 19946
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fae"),
+        "id" : 31,
+        "movie_name" : "Angels Crest",
+        "movie_genre" : "Drama",
+        "production_year" : 2001,
+        "budget" : 10534
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb0"),
+        "id" : 32,
+        "movie_name" : "Stoker",
+        "movie_genre" : "Drama|Mystery|Thriller",
+        "production_year" : 2009,
+        "budget" : 12465
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb4"),
+        "id" : 29,
+        "movie_name" : "Love Affair",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2009,
+        "budget" : 9446
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fb6"),
+        "id" : 40,
+        "movie_name" : "Black Roses ",
+        "movie_genre" : "Horror|Musical",
+        "production_year" : 2002,
+        "budget" : 12282
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fc2"),
+        "id" : 49,
+        "movie_name" : "Trouble at Timpetill (Enfants de Timpelbach, Les)",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 2003,
+        "budget" : 9601
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fc4"),
+        "id" : 51,
+        "movie_name" : "Zoolander",
+        "movie_genre" : "Comedy",
+        "production_year" : 2003,
+        "budget" : 19584
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fce"),
+        "id" : 60,
+        "movie_name" : "Gods Must Be Crazy II, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2009,
+        "budget" : 10206
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fcf"),
+        "id" : 65,
+        "movie_name" : "Love and Pain and the Whole Damn Thing",
+        "movie_genre" : "Comedy|Drama",
+        "production_year" : 2006,
+        "budget" : 15520
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fd6"),
+        "id" : 70,
+        "movie_name" : "My Brilliant Career",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2003,
+        "budget" : 12185
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fd7"),
+        "id" : 55,
+        "movie_name" : "Man and a Woman, A (Un homme et une femme)",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2005,
+        "budget" : 10719
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fda"),
+        "id" : 74,
+        "movie_name" : "Main Event, The",
+        "movie_genre" : "Comedy",
+        "production_year" : 2001,
+        "budget" : 18921
+}
+Type "it" for more
+
+> db.users.find().sort({production_year: -1},{movie_name: -1}).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa7"),
+        "id" : 24,
+        "movie_name" : "Lower City (Cidade Baixa)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fc7"),
+        "id" : 57,
+        "movie_name" : "Until Death",
+        "movie_genre" : "Action|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 9060
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fd9"),
+        "id" : 72,
+        "movie_name" : "Munchies",
+        "movie_genre" : "Comedy|Horror",
+        "production_year" : 2020,
+        "budget" : 13306
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3ff0"),
+        "id" : 96,
+        "movie_name" : "Admiral Yamamoto",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2020,
+        "budget" : 11723
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3ffc"),
+        "id" : 107,
+        "movie_name" : "What's Up, Scarlet?",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 15802
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc400c"),
+        "id" : 124,
+        "movie_name" : "Emperor's New Groove, The",
+        "movie_genre" : "Adventure|Animation|Children|Comedy|Fantasy",
+        "production_year" : 2020,
+        "budget" : 10446
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc401c"),
+        "id" : 133,
+        "movie_name" : "Just Like Me (Igualita a Mi)",
+        "movie_genre" : "Comedy|Romance",
+        "production_year" : 2020,
+        "budget" : 12892
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4047"),
+        "id" : 180,
+        "movie_name" : "Effie Gray",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18584
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4057"),
+        "id" : 198,
+        "movie_name" : "The Man in the Orange Jacket",
+        "movie_genre" : "Horror|Mystery|Thriller",
+        "production_year" : 2020,
+        "budget" : 11263
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40a4"),
+        "id" : 272,
+        "movie_name" : "Harry Potter and the Sorcerer's Stone (a.k.a. Harry Potter and the Philosopher's Stone)",
+        "movie_genre" : "Adventure|Children|Fantasy",
+        "production_year" : 2020,
+        "budget" : 12307
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40ae"),
+        "id" : 282,
+        "movie_name" : "Ricky & Barabba",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 13321
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40d7"),
+        "id" : 326,
+        "movie_name" : "Desperate Hours",
+        "movie_genre" : "Crime|Drama|Thriller",
+        "production_year" : 2020,
+        "budget" : 14421
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40da"),
+        "id" : 329,
+        "movie_name" : "Deck the Halls",
+        "movie_genre" : "Comedy",
+        "production_year" : 2020,
+        "budget" : 15389
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40e7"),
+        "id" : 343,
+        "movie_name" : "Just 4 Kicks",
+        "movie_genre" : "Children",
+        "production_year" : 2020,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40ec"),
+        "id" : 347,
+        "movie_name" : "Strange Case of Dr. Jekyll and Miss Osbourne, The (Dr. Jekyll and His Women) (Docteur Jekyll et les femmes)",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 18220
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40fb"),
+        "id" : 364,
+        "movie_name" : "Shiver (Eskalofrío)",
+        "movie_genre" : "Horror|Thriller",
+        "production_year" : 2020,
+        "budget" : 19200
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4105"),
+        "id" : 372,
+        "movie_name" : "Sink the Bismark!",
+        "movie_genre" : "Action|Drama|War",
+        "production_year" : 2020,
+        "budget" : 9811
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4115"),
+        "id" : 388,
+        "movie_name" : "Cold Showers (Douches froides)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 13426
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3f95"),
+        "id" : 3,
+        "movie_name" : "Walk in the Clouds, A",
+        "movie_genre" : "Drama|Romance",
+        "production_year" : 2019,
+        "budget" : 18543
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa0"),
+        "id" : 17,
+        "movie_name" : "Orders Signed in White",
+        "movie_genre" : "(no genres listed)",
+        "production_year" : 2019,
+        "budget" : 9976
+}
+Type "it" for more
+>
+> db.users.find().sort({production_year: -1},{movie_name: -1}).skip(10).limit(5).pretty()
+{
+        "_id" : ObjectId("619f58cf10453566bafc40ec"),
+        "id" : 347,
+        "movie_name" : "Strange Case of Dr. Jekyll and Miss Osbourne, The (Dr. Jekyll and His Women) (Docteur Jekyll et les femmes)",
+        "movie_genre" : "Horror",
+        "production_year" : 2020,
+        "budget" : 18220
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc40e7"),
+        "id" : 343,
+        "movie_name" : "Just 4 Kicks",
+        "movie_genre" : "Children",
+        "production_year" : 2020,
+        "budget" : 10239
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc4047"),
+        "id" : 180,
+        "movie_name" : "Effie Gray",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 18584
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3fa7"),
+        "id" : 24,
+        "movie_name" : "Lower City (Cidade Baixa)",
+        "movie_genre" : "Drama",
+        "production_year" : 2020,
+        "budget" : 14854
+}
+{
+        "_id" : ObjectId("619f58cf10453566bafc3ff0"),
+        "id" : 96,
+        "movie_name" : "Admiral Yamamoto",
+        "movie_genre" : "Drama|War",
+        "production_year" : 2020,
+        "budget" : 11723
+}
+
+
