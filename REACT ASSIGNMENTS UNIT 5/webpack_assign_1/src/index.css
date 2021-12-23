@@ -1,0 +1,18 @@
+.heading{
+    color: rgb(223, 75, 75);
+    font-size: large;
+}
+body{
+    border:1px solid red;
+    padding:10px;
+    height:520px;
+}
+.inputDiv{
+    margin-top: 40px;
+}
+img{
+    width:200px
+}
+.displayTaskcolor{
+    color: seagreen;
+}
